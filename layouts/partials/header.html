@@ -10,4 +10,9 @@
 {{- end -}}
 
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+
+<div class="date">
+  {{ .Date.Format "2006-01-02" }}
+  <span class="secondary">({{ .Lastmod.Format "2006-01-02" }})</span>
+</div>
 </header>
