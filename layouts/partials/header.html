@@ -1,8 +1,8 @@
 <header>
-<h1>{{ .Title | default site.Title }}</h1>
+<h1 class="title">{{ .Title | default site.Title }}</h1>
 {{ with .Params.subtitle }}
-  {{ $.RenderString . }}
+  <span class="subtitle"> {{ $.RenderString . }}</span>
 {{ end }}
-<hr>
+<hr class="distanced">
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 </header>
