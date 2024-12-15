@@ -10,8 +10,8 @@ body {
   font-size: 1.2em;
   line-height: 1.5;
   font-family: "Cantarell", "Noto Sans", sans-serif;
-  max-width: 32em;
-  margin: auto;
+  max-width: min(50%, 40em);
+  margin: 1em auto;
   padding-top: 3em;
   color: #000000;
   background: #f9f9f9;
@@ -40,8 +40,16 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   font-size: 98%;
 }
 
-.hid {
+.hide {
   display: none;
+}
+
+footer {
+  margin-top: 4em;
+  font-size: .875em;
+  line-height: .875em;
+  text-align: center;
+  overflow: hidden;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -67,5 +75,40 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
   }
   img {
     filter: brightness(.85) contrast(1.1);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  body {
+    font: 1.05rem/1.5rem sans-serif;
+    max-width: 92%;
+  }
+  header {
+    margin-top: 4em;
+  }
+  article {
+    padding-bottom: 100px;
+  }
+  footer {
+    height: 90px;
+  }
+  h1, h2, h3, h4 {
+    line-height: 2.5rem;
+  }
+  pre, code, kbd, samp {
+    font: 0.85rem/1.25rem monospace;
+    padding: .1em .2em;
+  }
+  pre {
+    padding: .25em .5em;
+  }
+}
+
+@media print {
+  body {
+    max-width: none;
+  }
+  footer {
+    visibility: hidden;
   }
 }
