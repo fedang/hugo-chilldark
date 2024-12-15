@@ -7,6 +7,10 @@
 
 ## Installation
 
+```
+git submodule add https://github.com/fedang/hugo-chilldark themes/chilldark
+```
+
 ## Configuration
 
 ## TODO
