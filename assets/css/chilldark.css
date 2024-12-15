@@ -42,7 +42,8 @@ a {
 
 .secondary {
   color: #909090;
-  font-size: 98%;
+  font-size: 95%;
+  display: inline;
 }
 
 .hide {
