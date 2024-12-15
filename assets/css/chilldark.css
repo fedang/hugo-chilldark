@@ -37,12 +37,17 @@ h1 {
 
 .title {
   font-size: 2.15em;
-  margin-bottom: 0.45em;
+  margin-bottom: 0.2em;
 }
 
 .subtitle {
-  font-size: 98%;
-  padding: 0 0.2em;
+  font-size: 97%;
+  margin: 0 1.3em;
+}
+
+.subtitle:before {
+  content: "↪";
+  margin-right: 0.3em;
 }
 
 a {
@@ -53,13 +58,15 @@ hr {
   height: 1px;
   background-color: #000;
   border: none;
-  padding-left: 0.1em;
-  padding-right: 0.1em;
 }
 
 hr.distanced {
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+header {
+  margin-bottom: 3em;
 }
 
 span.distanced {
@@ -131,6 +138,7 @@ footer {
   }
   header {
     margin-top: 4em;
+    margin-bottom: 2em;
   }
   article {
     padding-bottom: 100px;
