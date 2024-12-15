@@ -1,9 +1,13 @@
 <header>
 <h1 class="title">{{ .Title | default site.Title }}</h1>
-{{- with .Params.subtitle -}}
-  <span class="subtitle"> {{ $.RenderString . }}</span>
+
+{{- if .IsHome -}}
+  {{- with .Params.subtitle -}}
+    <span class="subtitle"> {{ $.RenderString . }}</span>
+  {{- end -}}
+{{- else -}}
+  {{ partial "breadcrumbs.html" . }}
 {{- end -}}
 
-{{ partial "breadcrumbs.html" . }}
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 </header>
