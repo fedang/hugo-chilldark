@@ -26,6 +26,10 @@ main {
   padding-bottom: 30%;
 }
 
+pre {
+  overflow: auto;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: bold;
@@ -33,6 +37,22 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2.2em;
+}
+
+.note {
+  border: solid 1px #000;
+  margin: 1.4em 2em;
+  padding: 0.6em 1.2em;
+}
+
+.note p {
+  margin: 0.5em auto;
+}
+
+.dash {
+  display: inline-block;
+  width: 1.2em;
+  text-align: center;
 }
 
 .title {
@@ -108,6 +128,9 @@ footer {
     background-color: #242424;
     color: #fff;
   }
+  .note {
+    border-color: #fff;
+  }
   a:link {
     color: #9cf;
   }
@@ -155,6 +178,10 @@ footer {
   }
   pre {
     padding: .25em .5em;
+  }
+  .note {
+    margin: 1em 0.5em;
+    padding: 0.5em 1em;
   }
 }
 
