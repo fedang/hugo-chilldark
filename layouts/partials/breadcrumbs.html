@@ -8,6 +8,10 @@
           {{ .Site.Title }}
         {{- else if .IsSection -}}
           {{ .Section }}
+        {{- else if eq .Kind "taxonomy" -}}
+          {{- .Section -}}
+        {{- else if eq .Kind "term" -}}
+          {{- .Title | lower -}}
         {{- else -}}
           {{- if .Site.Params.title_crumbs -}}
             {{ .Title }}
@@ -32,6 +36,10 @@
           {{ .Title }}
         {{- else if .IsSection -}}
           {{ .Section }}
+        {{- else if eq .Kind "taxonomy" -}}
+          {{- .Section -}}
+        {{- else if eq .Kind "term" -}}
+          {{- .Title | lower -}}
         {{- else -}}
           {{ with .Slug }}
             {{ . }}
