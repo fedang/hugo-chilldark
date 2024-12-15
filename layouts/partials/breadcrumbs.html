@@ -3,13 +3,41 @@
     {{- range .Ancestors.Reverse }}
     <li>
       <span class="secondary">
-      <a href="{{ .RelPermalink }}">{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}</a>
+      <a href="{{ .RelPermalink }}">
+        {{- if .IsHome -}}
+          {{ .Site.Title }}
+        {{- else -}}
+          {{- if .Site.Params.title_crumbs -}}
+            {{ .Title }}
+          {{- else -}}
+            {{ with .Slug }}
+              {{ . }}
+            {{ else }}
+              {{ with .File }}
+                {{ .BaseFileName }}
+              {{ end }}
+            {{ end }}
+          {{- end -}}
+        {{- end -}}
+      </a>
       </span>
     </li>
     <span class="distanced" aria-hidden="true">/</span>
     {{- end }}
     <li class="active">
-      <a href="{{ .RelPermalink }}" aria-current="location">{{ .Title }}</a>
+      <a href="{{ .RelPermalink }}" aria-current="location">
+        {{- if .Site.Params.title_crumbs -}}
+          {{ .Title }}
+        {{- else -}}
+          {{ with .Slug }}
+            {{ . }}
+          {{ else }}
+            {{ with .File }}
+              {{ .BaseFileName }}
+            {{ end }}
+          {{ end }}
+        {{- end -}}
+      </a>
     </li>
   </ol>
 </nav>
