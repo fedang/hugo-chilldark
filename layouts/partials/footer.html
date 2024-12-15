@@ -1,4 +1,4 @@
 <footer>
   <strong><a href="#">top &#8593;</a></strong>
-  <p>{{ .Site.Params.Author.name }} &copy; {{ now.Year }} <span class="distanced">&ndash;</span> bottom text</p>
+  <p>{{ .Site.Params.Author.name }} &copy; {{ now.Year }} <span class="distanced">&ndash;</span> {{ .Site.Params.bottom_text | default `bottom text` }}</p>
 </footer>
