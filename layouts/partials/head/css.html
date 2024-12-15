@@ -1,7 +1,6 @@
 {{ $files := slice "css/modern-normalize.css" "css/chilldark.css" }}
 {{ $files := $files | append .Site.Params.custom_css }}
 {{ $files := $files | append .Params.custom_css }}
-
 {{- range $files }}
   {{- with resources.Get . }}
     {{- if eq hugo.Environment "development" }}
