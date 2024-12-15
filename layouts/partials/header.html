@@ -3,6 +3,5 @@
 {{ with .Params.subtitle }}
   <span class="subtitle"> {{ $.RenderString . }}</span>
 {{ end }}
-<hr class="distanced">
 {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 </header>
