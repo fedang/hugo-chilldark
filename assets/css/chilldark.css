@@ -82,6 +82,11 @@ h1 {
 
 a {
   text-decoration: none;
+  color: #c9f;
+}
+
+a:hover, a:visited:hover {
+  color: #5e5086;
 }
 
 hr {
@@ -102,31 +107,6 @@ header {
 span.distanced {
   margin-left: .32em;
   margin-right: .32em;
-}
-
-.secondary {
-  color: #909090;
-  font-size: 0.98em;
-  display: inline;
-}
-
-.secondary a {
-  color: inherit;
-}
-
-.breadcrumb ol {
-  padding-left: 0;
-  list-style: none;
-  display: inline;
-}
-
-.breadcrumb li {
-  display: inline;
-}
-
-.breadcrumb .active {
-  /* same as secondary */
-  font-size: 0.98em;
 }
 
 .hide {
@@ -160,14 +140,11 @@ footer {
   .note {
     border-color: #fff;
   }
-  a:link {
-    color: #9cf;
+  a {
+    color: #5e5086;
   }
   a:hover, a:visited:hover {
-    color: #cef;
-  }
-  a:visited {
-    color: #c9f;
+    color: #f9f9f9;
   }
   img {
     filter: brightness(.85) contrast(1.1);
@@ -220,4 +197,30 @@ footer {
   footer {
     visibility: hidden;
   }
+}
+
+.secondary {
+  color: #909090;
+  font-size: 0.98em;
+  display: inline;
+}
+
+.secondary a {
+  color: inherit;
+}
+
+.breadcrumb ol {
+  padding-left: 0;
+  list-style: none;
+  display: inline;
+}
+
+.breadcrumb li {
+  display: inline;
+}
+
+.breadcrumb .active {
+  /* same as secondary */
+  font-size: 0.98em;
+  color: inherit;
 }
