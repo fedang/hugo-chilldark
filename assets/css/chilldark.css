@@ -203,3 +203,12 @@ footer {
     visibility: hidden;
   }
 }
+
+.breadcrumb ol {
+  list-style: none;
+}
+
+.breadcrumb li {
+  display: inline;
+  font-size: 80%;
+}
