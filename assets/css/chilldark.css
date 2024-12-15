@@ -135,6 +135,10 @@ span.distanced {
   color: #000;
 }
 
+.pubdate {
+  margin-right: 1em;
+}
+
 .hide {
   display: none;
 }
@@ -208,10 +212,6 @@ footer {
   }
   pre, code, kbd, samp {
     font: 0.85rem/1.25rem monospace;
-    padding: .1em .2em;
-  }
-  pre {
-    padding: .25em .5em;
   }
   .note {
     margin: 1em 0.5em;
