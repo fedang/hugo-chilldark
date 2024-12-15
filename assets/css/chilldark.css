@@ -139,6 +139,10 @@ span.distanced {
   margin-right: 1em;
 }
 
+.pubinfo {
+  margin-bottom: 2em;
+}
+
 .hide {
   display: none;
 }

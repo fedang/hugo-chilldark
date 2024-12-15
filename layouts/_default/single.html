@@ -1,12 +1,14 @@
 {{ define "main" }}
-  <div>
+  <div class="pubinfo">
     <span class="pubdate">
     <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
     </span>
     <span class="lastmod secondary">(<time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time>)
     </span>
+
+    <br>
+    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   </div>
 
   {{ .Content }}
-  {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ end }}
