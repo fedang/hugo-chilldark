@@ -6,6 +6,8 @@
       <a href="{{ .RelPermalink }}">
         {{- if .IsHome -}}
           {{ .Site.Title }}
+        {{- else if .IsSection -}}
+          {{ .Section }}
         {{- else -}}
           {{- if .Site.Params.title_crumbs -}}
             {{ .Title }}
@@ -28,6 +30,8 @@
       <a href="{{ .RelPermalink }}" aria-current="location">
         {{- if .Site.Params.title_crumbs -}}
           {{ .Title }}
+        {{- else if .IsSection -}}
+          {{ .Section }}
         {{- else -}}
           {{ with .Slug }}
             {{ . }}
