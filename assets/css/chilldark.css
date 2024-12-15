@@ -42,6 +42,7 @@ h1 {
 
 .subtitle {
   font-size: 98%;
+  padding: 0 0.2em;
 }
 
 a {
@@ -49,7 +50,11 @@ a {
 }
 
 hr {
-  border-width: 1px;
+  height: 1px;
+  background-color: #000;
+  border: none;
+  padding-left: 0.1em;
+  padding-right: 0.1em;
 }
 
 hr.distanced {
@@ -89,8 +94,8 @@ footer {
     color: #ffffff;
     background: #181818;
   }
-  header, hr {
-    border-bottom-color: #fff;
+  hr {
+    background-color: #fff;
   }
   pre, code, kbd, samp {
     background-color: #242424;
