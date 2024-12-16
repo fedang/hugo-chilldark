@@ -154,8 +154,8 @@ span.distanced {
 }
 
 footer {
-  font-size: .875em;
-  line-height: .875em;
+  font-size: .95em;
+  line-height: .9em;
   text-align: center;
   position: absolute;
   left: 0;
@@ -165,19 +165,26 @@ footer {
   overflow: hidden;
 }
 
-.icon-small, .icon-medium, .icon-large {
+footer > p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
   vertical-align: middle;
   display: inline-block;
+  margin: 0 .4em;
 }
 
 .icon-small {
-  height: 1.2em;
-  width: 1.2em;
+  height: 1.1em;
+  width: 1.1em;
 }
 
 .icon-medium {
-  height: 1.8em;
-  width: 1.8em;
+  height: 1.6em;
+  width: 1.6em;
 }
 
 .icon-large {
