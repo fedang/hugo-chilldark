@@ -26,18 +26,24 @@ main {
   padding-bottom: 30%;
 }
 
-pre code {
-    padding: 0.6em;
-    width: 100%;
-    height: auto;
-    overflow: auto;
-    box-sizing: border-box;
-    display: block;
+pre, code, kbd, samp {
+  background-color: #eee;
+  font-size: 0.95em;
+  overflow: hidden;
 }
 
-pre, code {
-    padding: 0px;
-    overflow: hidden;
+code {
+  padding: 2px 4px;
+}
+
+pre code {
+  padding: 0.6em;
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  box-sizing: border-box;
+  display: block;
+  font-size: 1em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -111,7 +117,7 @@ span.distanced {
 
 .secondary {
   color: #909090;
-  font-size: 0.98em;
+  font-size: .95em;
   display: inline;
 }
 
@@ -131,7 +137,7 @@ span.distanced {
 
 .breadcrumb .active a {
   /* same as secondary */
-  font-size: 0.98em;
+  font-size: .95em;
   color: #000;
 }
 
