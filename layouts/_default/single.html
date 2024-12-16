@@ -1,4 +1,5 @@
 {{ define "main" }}
+  {{ if not .Params.no_pubinfo }}
   <div class="pubinfo">
     <span class="pubdate">
     <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
@@ -9,6 +10,6 @@
     <br>
     {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   </div>
-
+  {{ end }}
   {{ .Content }}
 {{ end }}
