@@ -1,5 +1,6 @@
 {{ $name := printf "icons/%s.svg" (.Get 0) }}
 {{ $image := resources.Get $name }}
-{{ with $image }}
-  <img src="{{ .RelPermalink }}" class="icon-small icon-invert">
-{{ end }}
+{{ $size := .Get 1 | default `small` }}
+{{- with $image -}}
+<img src="{{ .RelPermalink }}" class="icon icon-{{ $size }} icon-invert" alt="{{ $name }}"></img>
+{{- end -}}
