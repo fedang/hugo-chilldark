@@ -16,14 +16,10 @@ body {
   color: #000000;
   background: #f9f9f9;
   text-align: left;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  justify-content: center;
 }
 
 main {
-  padding: 0 .64em;
+  padding: 0 .65em;
   padding-bottom: 32%;
 }
 
@@ -49,7 +45,7 @@ pre code {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 h1 {
@@ -139,8 +135,8 @@ span.distanced {
 
 .breadcrumb li {
   display: inline;
-  white-space: wrap;
-  word-break: initial;
+  white-space: nowrap;
+  word-break: break-word;
 }
 
 .breadcrumb .active a {
@@ -259,10 +255,6 @@ footer > p {
   li a {
     word-break: break-word;
   }
-  .breadcrumb ol {
-    flex-direction: column;
-    flex-wrap: nowrap;
-  }
 }
 
 /* mobile */
@@ -281,17 +273,20 @@ footer > p {
   footer {
     height: 64px;
   }
-  .title {
-    font-size: 1.82em;
-  }
   h1, h2, h3, h4 {
     line-height: 2.2rem;
   }
   pre, code, kbd, samp {
     font: 0.85rem/1.25rem monospace;
   }
+  .title {
+    font-size: 1.85em;
+  }
   .subtitle {
-    margin: 0 1.2em;
+    margin: 0 0.5em;
+  }
+  .subtitle:before {
+    margin-right: 0.2em;
   }
   .dash {
     width: 1.1em;
