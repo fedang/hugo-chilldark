@@ -128,7 +128,11 @@ span.distanced {
 .breadcrumb ol {
   padding-left: 0;
   list-style: none;
-  display: inline;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: center;
 }
 
 .breadcrumb li {
@@ -258,6 +262,10 @@ footer > p {
   .note {
     margin: 1em 0.5em;
     padding: 0.5em 1em;
+  }
+  .breadcrumb ol {
+    flex-direction: column;
+    flex-wrap: nowrap;
   }
 }
 
