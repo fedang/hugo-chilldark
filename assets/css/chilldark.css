@@ -72,7 +72,7 @@ h1 {
 
 .title {
   font-size: 2.15em;
-  margin-bottom: 0.32em;
+  margin-bottom: 0;
 }
 
 .subtitle {
@@ -108,7 +108,6 @@ hr.distanced {
 
 header {
   margin-top: 3em;
-  margin-bottom: 3em;
 }
 
 span.distanced {
@@ -148,12 +147,8 @@ span.distanced {
   color: #000;
 }
 
-.pubdate {
-  margin-right: 1em;
-}
-
 .pubinfo {
-  margin-bottom: 2em;
+  margin-bottom: 3em !important;
 }
 
 .hide {
@@ -265,10 +260,6 @@ footer > p {
   body {
     font: 1.05rem/1.5rem sans-serif;
     max-width: 95%;
-  }
-  header {
-    margin-top: 3.2em;
-    margin-bottom: 2em;
   }
   article {
     padding-bottom: 100px;
