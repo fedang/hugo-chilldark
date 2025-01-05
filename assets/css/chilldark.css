@@ -79,6 +79,7 @@ h1 {
 .subtitle {
   font-size: 1em;
   margin: 0 1.3em;
+  white-space: nowrap;
 }
 
 .subtitle:before {
@@ -137,6 +138,8 @@ span.distanced {
 
 .breadcrumb li {
   display: inline;
+  white-space: wrap;
+  word-break: initial;
 }
 
 .breadcrumb .active a {
@@ -221,8 +224,8 @@ footer > p {
     color: #fff;
   }
   img {
-    -webkit-filter: brightness(.85) contrast(1.1);
-    filter: brightness(.85) contrast(1.1);
+    -webkit-filter: brightness(.90) contrast(1.1);
+    filter: brightness(.90) contrast(1.1);
   }
   .icon-invert {
     -webkit-filter: invert(100%);
