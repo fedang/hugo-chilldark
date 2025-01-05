@@ -4,24 +4,24 @@
     <li>
       {{- if not .IsHome -}}<span class="distanced" aria-hidden="true">/</span>{{- end -}}<a class="secondary" href="{{ .RelPermalink }}">
         {{- if .IsHome -}}
-          {{ .Site.Title }}
+          {{- .Site.Title -}}
         {{- else if .IsSection -}}
-          {{ .Section }}
+          {{- .Section -}}
         {{- else if eq .Kind "taxonomy" -}}
           {{- .Section -}}
         {{- else if eq .Kind "term" -}}
           {{- .Title | lower -}}
         {{- else -}}
           {{- if .Site.Params.title_crumbs -}}
-            {{ .Title }}
+            {{- .Title -}}
           {{- else -}}
-            {{ with .Slug }}
-              {{ . }}
-            {{ else }}
-              {{ with .File }}
-                {{ .BaseFileName }}
-              {{ end }}
-            {{ end }}
+            {{- with .Slug -}}
+              {{- . -}}
+            {{- else -}}
+              {{- with .File -}}
+                {{- .BaseFileName -}}
+              {{- end -}}
+            {{- end -}}
           {{- end -}}
         {{- end -}}
       </a>
@@ -30,21 +30,21 @@
     <li class="active">
       <span class="distanced" aria-hidden="true">/</span><a href="{{ .RelPermalink }}" aria-current="location">
         {{- if .Site.Params.title_crumbs -}}
-          {{ .Title }}
+          {{- .Title -}}
         {{- else if .IsSection -}}
-          {{ .Section }}
+          {{- .Section -}}
         {{- else if eq .Kind "taxonomy" -}}
           {{- .Section -}}
         {{- else if eq .Kind "term" -}}
           {{- .Title | lower -}}
         {{- else -}}
-          {{ with .Slug }}
-            {{ . }}
-          {{ else }}
-            {{ with .File }}
-              {{ .BaseFileName }}
-            {{ end }}
-          {{ end }}
+          {{- with .Slug -}}
+            {{- . -}}
+          {{- else -}}
+            {{- with .File -}}
+              {{- .BaseFileName -}}
+            {{- end -}}
+          {{- end -}}
         {{- end -}}
       </a>
     </li>
