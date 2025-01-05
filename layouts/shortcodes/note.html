@@ -1,5 +1,5 @@
 <div class="note">
   <strong>{{ .Get 0 | default `Note` }}</strong>
   <br>
-  {{ .Inner }}
+  {{ .Inner | markdownify }}
 </div>
