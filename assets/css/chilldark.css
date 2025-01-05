@@ -12,7 +12,7 @@ body {
   font-family: "Cantarell", "Noto Sans", sans-serif;
   max-width: min(50%, 42em);
   margin: 1em auto;
-  padding: 0 .7em;
+  padding: 0;
   color: #000000;
   background: #f9f9f9;
   text-align: left;
@@ -23,6 +23,7 @@ body {
 }
 
 main {
+  padding: 0 .64em;
   padding-bottom: 32%;
 }
 
@@ -258,6 +259,10 @@ footer > p {
   li a {
     word-break: break-word;
   }
+  .breadcrumb ol {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
 }
 
 /* mobile */
@@ -276,8 +281,11 @@ footer > p {
   footer {
     height: 64px;
   }
+  .title {
+    font-size: 1.82em;
+  }
   h1, h2, h3, h4 {
-    line-height: 2.5rem;
+    line-height: 2.2rem;
   }
   pre, code, kbd, samp {
     font: 0.85rem/1.25rem monospace;
