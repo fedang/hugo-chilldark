@@ -237,11 +237,18 @@ footer > p {
   }
 }
 
+/* large mobile */
+@media only screen and (max-width: 576px) {
+  body {
+    max-width: 90%;
+  }
+}
+
 /* mobile */
 @media screen and (max-width: 480px) {
   body {
     font: 1.05rem/1.5rem sans-serif;
-    max-width: 92%;
+    max-width: 95%;
   }
   header {
     margin-top: 4em;
@@ -262,10 +269,6 @@ footer > p {
   .note {
     margin: 1em 0.5em;
     padding: 0.5em 1em;
-  }
-  .breadcrumb ol {
-    flex-direction: column;
-    flex-wrap: nowrap;
   }
 }
 

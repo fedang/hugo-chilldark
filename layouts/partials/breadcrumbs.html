@@ -2,35 +2,38 @@
   <ol>
     {{- range .Ancestors.Reverse }}
     <li>
+      {{- if not .IsHome -}}
+        <span class="distanced" aria-hidden="true">/</span>
+      {{- end -}}
       <span class="secondary">
-      <a href="{{ .RelPermalink }}">
-        {{- if .IsHome -}}
-          {{ .Site.Title }}
-        {{- else if .IsSection -}}
-          {{ .Section }}
-        {{- else if eq .Kind "taxonomy" -}}
-          {{- .Section -}}
-        {{- else if eq .Kind "term" -}}
-          {{- .Title | lower -}}
-        {{- else -}}
-          {{- if .Site.Params.title_crumbs -}}
-            {{ .Title }}
+        <a href="{{ .RelPermalink }}">
+          {{- if .IsHome -}}
+            {{ .Site.Title }}
+          {{- else if .IsSection -}}
+            {{ .Section }}
+          {{- else if eq .Kind "taxonomy" -}}
+            {{- .Section -}}
+          {{- else if eq .Kind "term" -}}
+            {{- .Title | lower -}}
           {{- else -}}
-            {{ with .Slug }}
-              {{ . }}
-            {{ else }}
-              {{ with .File }}
-                {{ .BaseFileName }}
+            {{- if .Site.Params.title_crumbs -}}
+              {{ .Title }}
+            {{- else -}}
+              {{ with .Slug }}
+                {{ . }}
+              {{ else }}
+                {{ with .File }}
+                  {{ .BaseFileName }}
+                {{ end }}
               {{ end }}
-            {{ end }}
+            {{- end -}}
           {{- end -}}
-        {{- end -}}
-      </a>
+        </a>
       </span>
     </li>
-    <span class="distanced" aria-hidden="true">/</span>
     {{- end }}
     <li class="active">
+      <span class="distanced" aria-hidden="true">/</span>
       <a href="{{ .RelPermalink }}" aria-current="location">
         {{- if .Site.Params.title_crumbs -}}
           {{ .Title }}
