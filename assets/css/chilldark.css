@@ -267,6 +267,9 @@ footer > p {
   .note {
     margin: 1em 0.5em;
   }
+  .pubinfo {
+    margin-bottom: 2em;
+  }
   li a {
     word-break: break-word;
   }
