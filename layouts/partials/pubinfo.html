@@ -1,16 +1,9 @@
 {{- if not .Params.no_pubinfo -}}
   <div class="pubinfo">
     <span class="pubdate">
-      Posted on <code><time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time></code>
-
-      {{- if ne .Lastmod .Date -}}
-      <span title="Last modification">(
-        {{- $image := resources.Get "icons/pen-to-square.svg" -}}
-        {{- with $image -}}
-        <img src="{{ .RelPermalink }}" class="icon icon-small icon-invert" alt="Edit"></img>
-        {{- end -}}
-        <code><time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time></code>)
-      </span>
+      Posted on <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+      {{ if ne .Lastmod .Date }}
+      <span class="secondary nowrap" title="Last modification">(<time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time>)</span>
       {{- end -}}
     </span>
 

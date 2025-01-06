@@ -78,11 +78,6 @@ h1 {
   width: 100%;
 }
 
-.pubinfo > * {
-  white-space: nowrap;
-  word-break: break-word;
-}
-
 .dash {
   display: inline-block;
   width: 1.2em;
@@ -103,6 +98,7 @@ h1 {
 .subtitle:before {
   content: "↪";
   margin-right: 0.32em;
+  font-size: 1.2em;
 }
 
 a {
@@ -144,6 +140,10 @@ span.distanced {
   color: inherit;
 }
 
+.secondary img {
+  filter: invert(55%) sepia(4%) saturate(0%) hue-rotate(201deg) brightness(103%) contrast(96%);
+}
+
 .breadcrumb ol {
   padding-left: 0;
   list-style: none;
@@ -168,6 +168,11 @@ span.distanced {
 
 .hide {
   display: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+  word-break: break-word;
 }
 
 footer {
