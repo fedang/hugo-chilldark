@@ -198,6 +198,12 @@ footer > p {
   display: inline-block;
 }
 
+.icon-mini {
+  height: 0.9em;
+  width: 0.9em;
+  margin: 0;
+}
+
 .icon-small {
   height: 1.1em;
   width: 1.1em;
