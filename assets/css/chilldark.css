@@ -145,6 +145,11 @@ span.distanced {
   filter: invert(54%) sepia(85%) saturate(0%) hue-rotate(214deg) brightness(79%) contrast(105%);
 }
 
+.flex-align {
+  display: inline-flex;
+  align-items: center;
+}
+
 .breadcrumb ol {
   padding-left: 0;
   list-style: none;
@@ -197,12 +202,6 @@ footer > p {
 .icon {
   vertical-align: middle;
   display: inline-block;
-}
-
-.icon-mini {
-  height: 0.9em;
-  width: 0.9em;
-  margin: 0;
 }
 
 .icon-small {
