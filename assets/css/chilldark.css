@@ -131,7 +131,7 @@ span.distanced {
 }
 
 .secondary {
-  color: #909090;
+  color: #808080;
   font-size: .95em;
   display: inline;
 }
@@ -141,7 +141,8 @@ span.distanced {
 }
 
 .secondary img {
-  filter: invert(55%) sepia(4%) saturate(0%) hue-rotate(201deg) brightness(103%) contrast(96%);
+  /* same as secondary */
+  filter: invert(54%) sepia(85%) saturate(0%) hue-rotate(214deg) brightness(79%) contrast(105%);
 }
 
 .breadcrumb ol {
