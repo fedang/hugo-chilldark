@@ -191,22 +191,24 @@ footer > p {
 .icon {
   vertical-align: middle;
   display: inline-block;
-  margin: 0 .4em;
 }
 
 .icon-small {
   height: 1.1em;
   width: 1.1em;
+  margin: 0 0.2em;
 }
 
 .icon-medium {
   height: 1.6em;
   width: 1.6em;
+  margin: 0 0.3em;
 }
 
 .icon-large {
   height: 3.2em;
   width: 3.2em;
+  margin: 0 0.4em;
 }
 
 @media (prefers-color-scheme: dark) {

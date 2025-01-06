@@ -2,8 +2,9 @@
   <div class="pubinfo">
     <span class="pubdate">
       Posted on <code><time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time></code>
+
       {{- if ne .Lastmod .Date -}}
-      <span class="secondary" title="Last modification">(
+      <span title="Last modification">(
         {{- $image := resources.Get "icons/pen-to-square.svg" -}}
         {{- with $image -}}
         <img src="{{ .RelPermalink }}" class="icon icon-small icon-invert" alt="Edit"></img>
