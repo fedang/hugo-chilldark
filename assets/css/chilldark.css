@@ -78,6 +78,10 @@ h1 {
   width: 100%;
 }
 
+.pubdate {
+  margin-right: 1.5em;
+}
+
 .dash {
   display: inline-block;
   width: 1.2em;
@@ -207,24 +211,23 @@ footer > p {
 .icon-small {
   height: 1.1em;
   width: 1.1em;
-  margin: 0 0.2em;
+  margin: 0 0.12em;
 }
 
 .icon-medium {
   height: 1.6em;
   width: 1.6em;
-  margin: 0 0.3em;
+  margin: 0 0.28em;
 }
 
 .icon-large {
   height: 3.2em;
   width: 3.2em;
-  margin: 0 0.4em;
+  margin: 0 0.42em;
 }
 
 /* FIXME */
 .icon:last-child {
-  margin: 0;
   margin-left: 0.5em;
 }
 
