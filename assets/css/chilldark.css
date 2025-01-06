@@ -222,6 +222,12 @@ footer > p {
   margin: 0 0.4em;
 }
 
+/* FIXME */
+.icon:last-child {
+  margin: 0;
+  margin-left: 0.5em;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     color: #ffffff;
