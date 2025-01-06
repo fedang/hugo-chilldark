@@ -149,6 +149,17 @@ span.distanced {
 
 .pubinfo {
   margin-bottom: 3em !important;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.pubinfo * {
+  white-space: nowrap;
+  word-break: break-word;
+  flex-grow: 1;
 }
 
 .hide {
