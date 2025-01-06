@@ -1,15 +1,13 @@
 {{ define "main" }}
   {{- if not .Params.no_pubinfo -}}
   <div class="pubinfo note">
-    <span class="pubdate">
-      Posted on <time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time>
+    <span class="pubdate" title="Edited on {{ .Lastmod.Format "2006-01-02" }}">
+      Posted on <code><time datetime="{{ .Date }}">{{ .Date.Format "2006-01-02" }}</time></code>
     </span>
-    <span class="distanced">
+
+    <span>
+      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </span>
-    <span class="secondary" title="Last modification">(<time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time>)
-    </span>
-    <br>
-    {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
   </div>
   {{- end -}}
 
