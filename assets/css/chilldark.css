@@ -251,6 +251,10 @@ a.footnote-ref {
   margin: 0 0.42em;
 }
 
+.icon-invert {
+  font-size: 105%;
+}
+
 /* FIXME */
 .icon:last-child {
   margin-left: 0.5em;
@@ -287,6 +291,7 @@ a.footnote-ref {
   .icon-invert {
     -webkit-filter: invert(100%);
     filter: invert(100%);
+    font-size: 100%;
   }
 }
 
