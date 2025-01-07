@@ -32,6 +32,7 @@ pre, code, kbd, samp {
 
 code {
   padding: 2px 4px;
+  white-space: nowrap;
 }
 
 pre code {
@@ -128,7 +129,7 @@ span.distanced {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  margin-top: 1.2em;
+  margin-top: 0;
   margin-bottom: 3em;
   width: 100%;
 }
@@ -284,7 +285,7 @@ a.footnote-ref:after {
 /* tablet */
 @media only screen and (max-width: 960px) {
   body {
-    max-width: 80%;
+    max-width: 78%;
   }
   footer {
     height: 4em;
@@ -294,13 +295,13 @@ a.footnote-ref:after {
 /* large mobile */
 @media only screen and (max-width: 576px) {
   body {
-    max-width: 90%;
+    max-width: 92%;
   }
   ul, ol {
     padding-left: 2em;
   }
   .note, .pubinfo {
-    padding: 0.4em 1em;
+    padding: 0.5em 1em;
   }
   .note {
     margin: 1em 0.4em;
@@ -334,6 +335,7 @@ a.footnote-ref:after {
   }
   .note, .pubinfo {
     border-radius: 4px;
+    padding: 0.4em 0.8em;
   }
   .title {
     font-size: 1.9em;
