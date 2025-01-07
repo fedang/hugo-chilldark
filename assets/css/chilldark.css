@@ -300,10 +300,10 @@ a.footnote-ref:after {
     padding-left: 2em;
   }
   .note, .pubinfo {
-    padding: 0.5em 1em;
+    padding: 0.4em 1em;
   }
   .note {
-    margin: 1em 0.5em;
+    margin: 1em 0.4em;
   }
   .pubinfo {
     margin-bottom: 2em;
@@ -350,6 +350,9 @@ a.footnote-ref:after {
   span.distanced {
     margin-left: .24em;
     margin-right: .24em;
+  }
+  .pubdate {
+    margin-right: 0;
   }
 }
 
