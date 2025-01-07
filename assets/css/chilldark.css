@@ -32,7 +32,6 @@ pre, code, kbd, samp {
 
 code {
   padding: 2px 4px;
-  white-space: nowrap;
 }
 
 pre code {
@@ -138,6 +137,10 @@ span.distanced {
   margin-right: 1.5em;
 }
 
+.pubdate .icon {
+  font-size: 80%;
+}
+
 .dash {
   display: inline-block;
   width: 1.2em;
@@ -201,6 +204,7 @@ a.footnote-ref:after {
 
 .breadcrumb li {
   display: inline;
+  margin: 0;
   white-space: nowrap;
   word-break: break-word;
 }
