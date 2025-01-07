@@ -154,6 +154,18 @@ span.distanced {
   align-items: center;
 }
 
+a.footnote-ref:before {
+  content: "[";
+}
+
+a.footnote-ref:after {
+  content: "]";
+}
+
+li > p {
+  margin: 0;
+}
+
 .breadcrumb ol {
   padding-left: 0;
   list-style: none;
