@@ -1,5 +1,7 @@
 +++
-title = '{{ replace .File.ContentBaseName "-" " " | title }}'
+title = "{{ replace .File.ContentBaseName "-" " " | title }}"
+subtitle = ""
+summary = ""
 date = {{ .Date }}
-draft = true
+no_pubinfo = false
 +++

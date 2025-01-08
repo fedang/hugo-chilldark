@@ -13,3 +13,4 @@
 {{- with .Params.author | default .Site.Params.author -}}
   <meta name="author" content = "{{ .name | plainify }}">
 {{- end -}}
+<meta name="description" content="{{ .Description | default .Summary }}">
