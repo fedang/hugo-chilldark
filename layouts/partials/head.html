@@ -16,7 +16,14 @@
 <meta name="author" content = "{{ .name | plainify }}">
 {{- end -}}
 <meta name="description" content="{{ .Description | default .Summary | plainify }}">
-{{- $kwds := default (.GetTerms "tags") .Keywords -}}
+{{- $kwds := slice -}}
+{{- with .Keywords -}}
+{{- $kwds := . -}}
+{{- else -}}
+{{- range .GetTerms "tags" -}}
+{{- $kwds := $kwds | append .RelPermalink -}}
+{{- end -}}
+{{- end -}}
 {{- if $kwds -}}
 <meta name="keywords" content="{{ delimit $kwds ", " | plainify }}">
 {{- end -}}
