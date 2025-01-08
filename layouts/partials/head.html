@@ -4,6 +4,8 @@
 <title>{{ with .Params.meta_title }}{{.}}{{else}}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s @ %s" .Title site.Title }}{{ end }}{{end}}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
+<link rel="feed" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
 {{ $public := not .Params.private }}
 {{- if $public -}}
   <meta name="robots" content="index, follow">
@@ -11,10 +13,13 @@
   <meta name="robots" content="noindex, nofollow">
 {{- end -}}
 {{- with .Params.author | default .Site.Params.author -}}
-  <meta name="author" content = "{{ .name | plainify }}">
+<meta name="author" content = "{{ .name | plainify }}">
 {{- end -}}
-<meta name="description" content="{{ .Description | default .Summary }}">
-<link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
-<link rel="feed" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
+<meta name="description" content="{{ .Description | default .Summary | plainify }}">
+{{- $kwds := default (.GetTerms "tags") .Keywords -}}
+{{- if $kwds -}}
+<meta name="keywords" content="{{ delimit $kwds ", " | plainify }}">
+{{- end -}}
+{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/schema.html" . }}
