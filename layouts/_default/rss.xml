@@ -46,15 +46,17 @@
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end }}
     {{- range $pages }}
-    <item>
-      <title>{{ .Title }}</title>
-      <link>{{ .Permalink }}</link>
-      <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-      {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
-      <guid isPermaLink="true">{{ .Permalink }}</guid>
-      <description>{{ .Summary | plainify | transform.XMLEscape | safeHTML }}</description>
-      <content:encoded>{{ .Content | transform.XMLEscape | safeHTML }}</content:encoded>
-    </item>
+      {{- if not .Params.no_rssfeed }}
+      <item>
+        <title>{{ .Title }}</title>
+        <link>{{ .Permalink }}</link>
+        <pubDate>{{ .PublishDate.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
+        {{- with $authorEmail }}<author>{{ . }}{{ with $authorName }} ({{ . }}){{ end }}</author>{{ end }}
+        <guid isPermaLink="true">{{ .Permalink }}</guid>
+        <description>{{ .Summary | plainify | transform.XMLEscape | safeHTML }}</description>
+        <content:encoded>{{ .Content | transform.XMLEscape | safeHTML }}</content:encoded>
+      </item>
+      {{- end }}
     {{- end }}
   </channel>
 </rss>
