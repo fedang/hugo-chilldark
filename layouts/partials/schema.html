@@ -1,0 +1,18 @@
+{{ if not .Params.no_schema }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "author": {
+    "@type": "Person",
+    {{- with .Params.author | default .Site.Params.author -}}
+    "name": {{ .name }}
+    {{- end -}}
+  },
+  "name": {{ .Title | default .Site.Title }},
+  "url": {{ .Site.BaseURL }},
+  "description": {{ .Description | default .Summary | plainify | safeHTML }},
+  "keywords": [{{ with .Keywords | default .Params.Tags }}{{ delimit . ", " | plainify }}{{end}}]
+}
+</script>
+{{ end }}
