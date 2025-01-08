@@ -13,6 +13,9 @@
     </span>
 
     <span>
+      {{ with (resources.Get "icons/tags.svg") -}}
+        <img src="{{ .RelPermalink }}" class="icon icon-small icon-invert"></img>
+      {{- end -}}
       {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </span>
   </div>
