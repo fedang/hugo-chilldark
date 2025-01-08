@@ -156,8 +156,9 @@ span.distanced {
   margin-right: 1.5em;
 }
 
-.pubdate .icon {
-  font-size: 80%;
+.pubtag {
+  /* same as secondary */
+  font-size: .95em;
 }
 
 .dash {
@@ -252,16 +253,22 @@ a.footnote-ref {
   display: inline-block;
 }
 
+.icon-smaller {
+  height: 0.9em;
+  width: 0.9em;
+  margin: 0 0.12em;
+}
+
 .icon-small {
   height: 1.1em;
   width: 1.1em;
-  margin: 0 0.12em;
+  margin: 0 0.16em;
 }
 
 .icon-medium {
   height: 1.6em;
   width: 1.6em;
-  margin: 0 0.28em;
+  margin: 0 0.3em;
 }
 
 .icon-large {
