@@ -8,6 +8,7 @@
   --radius: 0.2em;
   --link: #8a2be2;
   --link2: #c9f;
+  --dist: 0.32em;
 }
 
 html {
@@ -131,8 +132,7 @@ footer > p {
 }
 
 span.distanced {
-  margin-left: .32em;
-  margin-right: .32em;
+  margin: 0 var(--dist);
 }
 
 .note, .pubinfo {
@@ -187,7 +187,7 @@ span.distanced {
 
 .subtitle:before {
   content: "↪";
-  margin-right: 0.32em;
+  margin-right: var(--dist);
   font-size: 1.2em;
 }
 
@@ -348,6 +348,7 @@ a.footnote-ref {
 @media screen and (max-width: 480px) {
   :root {
     --radius: 4px;
+    --dist: 0.24em;
   }
   body {
     font: 1.05rem/1.5rem sans-serif;
@@ -378,15 +379,8 @@ a.footnote-ref {
   .subtitle {
     margin: 0 0.6em;
   }
-  .subtitle:before {
-    margin-right: 0.24em;
-  }
   .dash {
     width: 1.1em;
-  }
-  span.distanced {
-    margin-left: .24em;
-    margin-right: .24em;
   }
   .pubdate {
     margin-right: 0;
