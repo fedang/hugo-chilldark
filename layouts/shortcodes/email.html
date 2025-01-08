@@ -1,0 +1,7 @@
+{{- $mail := .Get 0 }}
+{{- $slices := split $mail "@" }}
+{{- $A := index $slices 0 }}
+{{- $slices := split (delimit (after 1 $slices) "") "." }}
+{{- $B := index $slices 0 }}
+{{- $C := (delimit (after 1 $slices) "") }}
+{{ printf "%s<span class=\"hide\">jib</span>&#64;<!--whatever-->%s<span class=\"hide\">rish</span>%s" $A $B $C | safeHTML }}
