@@ -1,3 +1,5 @@
+/* TODO: css vars */
+
 html {
   min-height: 100%;
   -ms-text-size-adjust: 100%;
@@ -44,6 +46,23 @@ pre code {
   font-size: 1em;
 }
 
+blockquote {
+  font-style: italic;
+  margin: 0.4em 0;
+  padding: 0.4em;
+  padding-left: 1.2em;
+  border-radius: 0.2em;
+  border-left: 0.2em solid #696969;
+  /* same as secondary */
+  color: #696969;
+  /* same as code */
+  background-color: #eee;
+}
+
+blockquote > p {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   font-weight: 500;
@@ -63,7 +82,7 @@ li > p {
 
 a {
   text-decoration: none;
-  color: #BA55D3;
+  color: #ba55d3;
 }
 
 a:hover, a:visited:hover {
@@ -165,7 +184,7 @@ span.distanced {
 }
 
 .secondary {
-  color: #808080;
+  color: #696969;
   font-size: .95em;
   display: inline;
 }
@@ -176,7 +195,7 @@ span.distanced {
 
 .secondary img {
   /* same as secondary */
-  filter: invert(54%) sepia(85%) saturate(0%) hue-rotate(214deg) brightness(79%) contrast(105%);
+  filter: invert(42%) sepia(28%) saturate(0%) hue-rotate(162deg) brightness(90%) contrast(91%);
 }
 
 .flex-align {
@@ -272,6 +291,18 @@ a.footnote-ref {
     background-color: #242424;
     color: #fff;
   }
+  blockquote {
+    background: #242424;
+    /* same as secondary */
+    color: #aaa;
+    border-left-color: #aaa;
+  }
+  .secondary {
+    color: #aaa;
+  }
+  .secondary img {
+    filter: invert(80%) sepia(0%) saturate(3%) hue-rotate(190deg) brightness(87%) contrast(85%);
+  }
   .note, .pubinfo {
     border: solid 1px #fff;
   }
@@ -345,6 +376,12 @@ a.footnote-ref {
   pre, code, kbd, samp {
     font: 0.85rem/1.25rem monospace;
     border-radius: 4px;
+  }
+  blockquote {
+    padding: 0.2em;
+    padding-left: 0.6em;
+    border-radius: 4px;
+    border-left-width: 4px;
   }
   .note, .pubinfo {
     border-radius: 4px;
