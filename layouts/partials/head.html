@@ -19,5 +19,6 @@
 {{- with .Keywords | default .Params.Tags -}}
 <meta name="keywords" content="{{ delimit . ", " | plainify }}">
 {{- end -}}
+<link rel="canonical" href="{{ with .Params.canonicalUrl }}{{ . }}{{ else }}{{ .Permalink }}{{ end }}">
 {{ template "_internal/opengraph.html" . }}
 {{ partial "schema.html" . }}
