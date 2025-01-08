@@ -6,7 +6,7 @@
         <span class="distanced"></span><span class="secondary nowrap flex-align" title="Last modification">
           (<time datetime="{{ .Lastmod }}">{{ .Lastmod.Format "2006-01-02" }}</time>
           {{ with (resources.Get "icons/pen-to-square.svg") -}}
-            <img src="{{ .RelPermalink }}" class="icon icon-smaller"></img>)
+            <img src="{{ .RelPermalink }}" class="icon icon-smaller">)
           {{- end -}}
         </span>
       {{- end -}}
@@ -14,7 +14,7 @@
 
     <span>
       {{ with (resources.Get "icons/tags.svg") -}}
-        <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert"></img>
+        <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert">
       {{- end -}}
       {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
     </span>
