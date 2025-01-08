@@ -20,6 +20,5 @@
 {{- if $kwds -}}
 <meta name="keywords" content="{{ delimit $kwds ", " | plainify }}">
 {{- end -}}
-{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
 {{ template "_internal/opengraph.html" . }}
 {{ template "_internal/schema.html" . }}
