@@ -16,16 +16,8 @@
 <meta name="author" content = "{{ .name | plainify }}">
 {{- end -}}
 <meta name="description" content="{{ .Description | default .Summary | plainify }}">
-{{- $kwds := slice -}}
-{{- with .Keywords -}}
-{{- $kwds := . -}}
-{{- else -}}
-{{- range .GetTerms "tags" -}}
-{{- $kwds := $kwds | append .RelPermalink -}}
-{{- end -}}
-{{- end -}}
-{{- if $kwds -}}
-<meta name="keywords" content="{{ delimit $kwds ", " | plainify }}">
+{{- with .Keywords | default .Params.Tags -}}
+<meta name="keywords" content="{{ delimit . ", " | plainify }}">
 {{- end -}}
 {{ template "_internal/opengraph.html" . }}
-{{ template "_internal/schema.html" . }}
+{{ partial "schema.html" . }}
