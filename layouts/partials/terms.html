@@ -1,9 +1,0 @@
-{{- $page := .page }}
-{{- $taxonomy := .taxonomy }}
-
-{{- with $page.GetTerms $taxonomy }}
-  {{- range $i, $e := . -}}
-  {{ if $i }}, {{ end }}
-  <span class="pubtag"><a href="{{ $e.RelPermalink }}">#{{ $e.LinkTitle | lower }}</a></span>
-  {{- end -}}
-{{- end }}

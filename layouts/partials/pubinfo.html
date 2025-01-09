@@ -14,11 +14,17 @@
       {{- end -}}
     </span>
 
+    {{- with .GetTerms "tags" }}
     <span>
       {{ with (resources.Get "icons/tags.svg") -}}
         <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert">
       {{- end -}}
-      {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+
+      {{- range $i, $e := . -}}
+      {{ if $i }}, {{ end }}
+      <span class="pubtag"><a href="{{ $e.RelPermalink }}">#{{ $e.LinkTitle | lower }}</a></span>
+      {{- end -}}
     </span>
+    {{- end }}
   </div>
 {{- end -}}
