@@ -9,6 +9,11 @@
   --link: #8a2be2;
   --link2: #c9f;
   --dist: 0.32em;
+  --pads: 0.6em 1.2em;
+  --smaller: 0.9em;
+  --small: 1.1em;
+  --medium: 1.6em;
+  --large: 3.2em;
 }
 
 html {
@@ -20,7 +25,6 @@ html {
 
 body {
   height: 100%;
-  font-size: 1.2em;
   line-height: 1.5;
   font-family: "Cantarell", "Noto Sans", sans-serif;
   max-width: 42em;
@@ -138,7 +142,7 @@ span.distanced {
 .note, .pubinfo {
   border: solid 2px var(--fg);
   border-radius: var(--radius);
-  padding: 0.6em 1.2em;
+  padding: var(--pads);
 }
 
 .note {
@@ -170,7 +174,7 @@ span.distanced {
 
 .dash {
   display: inline-block;
-  width: 1.2em;
+  width: var(--small);
   text-align: center;
 }
 
@@ -259,26 +263,26 @@ a.footnote-ref {
 }
 
 .icon-smaller {
-  height: 0.9em;
-  width: 0.9em;
+  height: var(--smaller);
+  width: var(--smaller);
   margin: 0 0.12em;
 }
 
 .icon-small {
-  height: 1.1em;
-  width: 1.1em;
+  height: var(--small);
+  width: var(--small);
   margin: 0 0.16em;
 }
 
 .icon-medium {
-  height: 1.6em;
-  width: 1.6em;
+  height: var(--medium);
+  width: var(--medium);
   margin: 0 0.3em;
 }
 
 .icon-large {
-  height: 3.2em;
-  width: 3.2em;
+  height: var(--large);
+  width: var(--large);
   margin: 0 0.42em;
 }
 
@@ -324,14 +328,14 @@ a.footnote-ref {
 
 /* large mobile */
 @media only screen and (max-width: 576px) {
+  :root {
+    --pads: 0.5em 1em;
+  }
   body {
     max-width: 92%;
   }
   ul, ol {
     padding-left: 2em;
-  }
-  .note, .pubinfo {
-    padding: 0.5em 1em;
   }
   .note {
     margin: 1em 0.4em;
@@ -349,6 +353,7 @@ a.footnote-ref {
   :root {
     --radius: 4px;
     --dist: 0.24em;
+    --pads: 0.4em 0.8em;
   }
   body {
     font: 1.05rem/1.5rem sans-serif;
@@ -366,21 +371,18 @@ a.footnote-ref {
   pre, code, kbd, samp {
     font: 0.85rem/1.25rem monospace;
   }
+  code {
+    padding: 1px 2px;
+  }
   blockquote {
     padding: 0.2em;
     padding-left: 0.6em;
-  }
-  .note, .pubinfo {
-    padding: 0.4em 0.8em;
   }
   .title {
     font-size: 1.9em;
   }
   .subtitle {
     margin: 0 0.6em;
-  }
-  .dash {
-    width: 1.1em;
   }
   .pubdate {
     margin-right: 0;
