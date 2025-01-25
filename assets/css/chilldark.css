@@ -140,6 +140,11 @@ span.distanced {
   margin: 0 var(--dist);
 }
 
+.headinfo {
+  padding: 0 .65em;
+  width: 100%;
+}
+
 .note, .pubinfo, .series {
   border: solid 2px var(--fg);
   border-radius: var(--radius);
@@ -182,14 +187,14 @@ span.distanced {
 }
 
 .title {
-  font-size: 2.15em;
+  font-size: 2.1em;
   margin-bottom: 0;
 }
 
 .subtitle {
   font-size: 1em;
   white-space: nowrap;
-  margin-right: 1.3em;
+  margin-left: 1.3em;
 }
 
 .subtitle:before {
@@ -382,7 +387,7 @@ a.footnote-ref {
     padding-left: 0.6em;
   }
   .title {
-    font-size: 1.9em;
+    font-size: 1.8em;
   }
   .subtitle {
     margin: 0 0.6em;

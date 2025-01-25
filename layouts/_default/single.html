@@ -1,6 +1,8 @@
 {{ define "info" }}
-  {{ partial "pubinfo.html" . }}
-  {{ partial "series.html" . }}
+  <div class="headinfo">
+    {{ partial "pubinfo.html" . }}
+    {{ partial "series.html" . }}
+  </div>
 {{ end }}
 
 {{ define "main" }}
