@@ -5,6 +5,7 @@
 </head>
 <body>
     {{ partial "header.html" . }}
+    {{ block "info" . }}{{ end }}
 
   <main>
     {{ block "main" . }}{{ end }}

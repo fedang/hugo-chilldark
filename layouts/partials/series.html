@@ -1,10 +1,9 @@
-{{- if .Params.series -}}
-{{- range $series := .Params.series -}}
+{{- with .GetTerms "series" }}
+{{- range $series := . }}
   <div class="series">
-    {{- $lnk := index (where ($.Page.GetTerms "series") "Params.Title" $series) index 0 }}
-    <span>Part of <em><a href="{{ $lnk.Permalink }}">{{ . }}</a></em></span>
+     <span>Part of <em><a href="{{ .Permalink }}">{{ .Title }}</a></em></span>
     <ol>
-        {{ range $num,$post := (index $.Site.Taxonomies.series ($series | urlize)).Pages.ByDate }}
+        {{ range $num,$post := ($.Site.Taxonomies.series.Get $series.Title).Pages.ByDate }}
             {{ if eq $post.Permalink $.Page.Permalink }}
                 <li class="active">
                     Part {{ add $num 1 }}: This Article
