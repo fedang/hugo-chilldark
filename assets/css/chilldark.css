@@ -139,7 +139,7 @@ span.distanced {
   margin: 0 var(--dist);
 }
 
-.note, .pubinfo {
+.note, .pubinfo, .series {
   border: solid 2px var(--fg);
   border-radius: var(--radius);
   padding: var(--pads);
@@ -153,7 +153,7 @@ span.distanced {
   margin: 0.5em auto;
 }
 
-.pubinfo {
+.pubinfo, .series {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -340,7 +340,7 @@ a.footnote-ref {
   .note {
     margin: 1em 0.4em;
   }
-  .pubinfo {
+  .pubinfo, .series {
     margin-bottom: 2em;
   }
   li a {

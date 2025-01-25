@@ -9,3 +9,8 @@ name = 'John Doe'
   [module.hugoVersion]
     extended = false
     min = "0.116.0"
+
+[taxonomies]
+	category = 'categories'
+	tag = 'tags'
+	series = 'series'
