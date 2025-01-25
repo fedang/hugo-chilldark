@@ -115,6 +115,7 @@ hr.distanced {
 
 header {
   margin-top: 3em;
+  margin-bottom: 3em;
 }
 
 footer {
@@ -154,14 +155,16 @@ span.distanced {
 }
 
 .pubinfo, .series {
+  margin-top: 0.8em;
+  width: 100%;
+}
+
+.pubinfo {
   display: inline-flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
-  margin-top: 0;
-  margin-bottom: 3em;
-  width: 100%;
 }
 
 .pubdate {
@@ -185,8 +188,8 @@ span.distanced {
 
 .subtitle {
   font-size: 1em;
-  margin: 0 1.32em;
   white-space: nowrap;
+  margin-right: 1.3em;
 }
 
 .subtitle:before {
@@ -340,7 +343,7 @@ a.footnote-ref {
   .note {
     margin: 1em 0.4em;
   }
-  .pubinfo, .series {
+  header {
     margin-bottom: 2em;
   }
   li a {
