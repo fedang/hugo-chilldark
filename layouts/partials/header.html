@@ -1,4 +1,3 @@
-<header>
 <h1 class="title">{{ .Title | default site.Title }}</h1>
 
 {{- if .IsHome -}}
@@ -8,6 +7,3 @@
 {{- else -}}
   {{ partial "breadcrumbs.html" . }}
 {{- end -}}
-
-{{/* {{ partial "menu.html" (dict "menuID" "main" "page" .) }} */}}
-</header>
