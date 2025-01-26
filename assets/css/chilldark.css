@@ -29,14 +29,14 @@ body {
   font-family: "Cantarell", "Noto Sans", sans-serif;
   max-width: 42em;
   margin: 1em auto;
-  padding: 0;
+  padding: 0 .16em;
   text-align: left;
   color: var(--fg);
   background: var(--bg);
 }
 
 main {
-  padding: 0 .65em;
+  width: 100%;
   padding-bottom: 32%;
 }
 
@@ -141,7 +141,7 @@ span.distanced {
 }
 
 .headinfo {
-  padding: 0 .65em;
+  padding: 0 .8em;
   width: 100%;
 }
 
@@ -193,13 +193,13 @@ span.distanced {
 .subtitle {
   font-size: 1em;
   white-space: nowrap;
-  margin-left: 1.3em;
+  margin-left: 1.6em;
 }
 
 .subtitle:before {
   content: "↪";
   margin-right: var(--dist);
-  font-size: 1.2em;
+  font-size: 1.4em;
   transform: scale(1, -1);
   display: inline-block;
 }
@@ -410,7 +410,7 @@ nav.breadcrumb {
     font-size: 1.8em;
   }
   .subtitle {
-    margin: 0 0.6em;
+    margin: 0 0.8em;
   }
   .pubdate {
     margin-right: 0;
