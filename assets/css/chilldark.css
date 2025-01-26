@@ -28,7 +28,7 @@ body {
   line-height: 1.5;
   font-family: "Cantarell", "Noto Sans", sans-serif;
   max-width: 42em;
-  margin: 1em auto;
+  margin: 0 auto;
   padding: 0 .16em;
   text-align: left;
   color: var(--fg);
@@ -114,7 +114,7 @@ hr.distanced {
 }
 
 header {
-  margin-top: 0;
+  margin-top: 1em;
   margin-bottom: 3em;
 }
 
@@ -188,18 +188,21 @@ span.distanced {
 
 .title {
   font-size: 2em;
+  margin-top: 0.4em;
 }
 
 .subtitle {
   font-size: 1em;
   white-space: nowrap;
   margin-left: 1.6em;
+  display: inline-flex;
+  align-items: center;
 }
 
 .subtitle:before {
   content: "↪";
   margin-right: var(--dist);
-  font-size: 1.4em;
+  font-size: 1.2em;
   transform: scale(1, -1);
   display: inline-block;
 }
@@ -233,11 +236,6 @@ a.footnote-ref:after {
 
 a.footnote-ref {
   margin-left: 0.2em;
-}
-
-nav.breadcrumb {
-  display: inline-flex;
-  align-items: center;
 }
 
 .breadcrumb ol {
@@ -410,7 +408,7 @@ nav.breadcrumb {
     font-size: 1.8em;
   }
   .subtitle {
-    margin: 0 0.8em;
+    margin: 0 0.4em;
   }
   .pubdate {
     margin-right: 0;
