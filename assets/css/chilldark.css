@@ -251,9 +251,22 @@ a.footnote-ref {
   word-break: break-word;
 }
 
-.breadcrumb .active a {
+.breadcrumb .active a  {
   font-size: var(--snd-size);
   color: var(--fg);
+}
+
+.series .active a {
+  color: var(--fg);
+}
+
+.series ol {
+  padding-left: 2em;
+  margin: 0;
+}
+
+.series li {
+  margin: 0;
 }
 
 .hide {
