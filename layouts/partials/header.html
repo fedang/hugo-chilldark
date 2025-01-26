@@ -1,9 +1,9 @@
-<h1 class="title">{{ .Title | default site.Title }}</h1>
-
-{{- if .IsHome -}}
-  {{- with .Params.subtitle -}}
+{{ if .IsHome }}
+  {{ with .Params.subtitle }}
     <span class="subtitle"> {{ $.RenderString . }}</span>
-  {{- end -}}
-{{- else -}}
+  {{ end }}
+{{ else }}
   {{ partial "breadcrumbs.html" . }}
-{{- end -}}
+{{ end }}
+
+<h1 class="title">{{ .Title | default site.Title }}</h1>

@@ -114,7 +114,7 @@ hr.distanced {
 }
 
 header {
-  margin-top: 3em;
+  margin-top: 0;
   margin-bottom: 3em;
 }
 
@@ -187,8 +187,7 @@ span.distanced {
 }
 
 .title {
-  font-size: 2.1em;
-  margin-bottom: 0;
+  font-size: 2em;
 }
 
 .subtitle {
@@ -201,6 +200,8 @@ span.distanced {
   content: "↪";
   margin-right: var(--dist);
   font-size: 1.2em;
+  transform: scale(1, -1);
+  display: inline-block;
 }
 
 .secondary {
@@ -234,6 +235,11 @@ a.footnote-ref {
   margin-left: 0.2em;
 }
 
+nav.breadcrumb {
+  display: inline-flex;
+  align-items: center;
+}
+
 .breadcrumb ol {
   padding-left: 0;
   list-style: none;
@@ -242,6 +248,7 @@ a.footnote-ref {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: center;
+  margin: 0;
 }
 
 .breadcrumb li {
