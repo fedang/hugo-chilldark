@@ -3,10 +3,10 @@
   <div class="pubinfo">
     <span class="pubdate">
       {{- with .Date }}
-      Posted on <time {{ .Format $ISO8601 | printf "datetime=%q" | safeHTMLAttr }}>{{ .Format "2006-01-02" }}</time>{{end}}
+      Posted on <time {{ .Format $ISO8601 | printf "datetime=%q" | safeHTMLAttr }}>{{ .Format "January 2, 2006" }}</time>{{end}}
       {{- if and (ne .Lastmod.Year .Date.Year) (ne .Lastmod.YearDay .Date.YearDay) -}}
         <span class="distanced"></span><span class="secondary nowrap flex-align" title="Last modification">
-          ({{with .Lastmod }}<time {{ .Format $ISO8601 | printf "datetime=%q" | safeHTMLAttr }}>{{ .Format "2006-01-02" }}</time>{{end}}
+          ({{with .Lastmod }}<time {{ .Format $ISO8601 | printf "datetime=%q" | safeHTMLAttr }}>{{ .Format "January 2, 2006" }}</time>{{end}}
           {{ with (resources.Get "icons/pen-to-square.svg") -}}
             <img src="{{ .RelPermalink }}" class="icon icon-smaller">)
           {{- end -}}
