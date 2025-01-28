@@ -5,22 +5,22 @@
     <li>
       {{- if not .IsHome -}}<span class="distanced" aria-hidden="true">/</span>{{- end -}}<a class="secondary" href="{{ .RelPermalink }}">
         {{- if .IsHome -}}
-          {{- .Site.Title -}}
+          {{- .Site.Title | urlize -}}
         {{- else if .IsSection -}}
-          {{- .Section -}}
+          {{- .Section | urlize -}}
         {{- else if eq .Kind "taxonomy" -}}
-          {{- .Section -}}
+          {{- .Section | urlize -}}
         {{- else if eq .Kind "term" -}}
-          {{- .Title | lower -}}
+          {{- .Title | urlize -}}
         {{- else -}}
           {{- if .Site.Params.title_crumbs -}}
-            {{- .Title -}}
+            {{- .Title | urlize -}}
           {{- else -}}
             {{- with .Slug -}}
               {{- . -}}
             {{- else -}}
               {{- with .File -}}
-                {{- .BaseFileName -}}
+                {{- .BaseFileName | urlize -}}
               {{- end -}}
             {{- end -}}
           {{- end -}}
@@ -31,19 +31,19 @@
     <li class="active">
       <span class="distanced" aria-hidden="true">/</span><a href="{{ .RelPermalink }}" aria-current="location">
         {{- if .Site.Params.title_crumbs -}}
-          {{- .Title -}}
+          {{- .Title | urlize -}}
         {{- else if .IsSection -}}
-          {{- .Section -}}
+          {{- .Section | urlize -}}
         {{- else if eq .Kind "taxonomy" -}}
-          {{- .Section -}}
+          {{- .Section | urlize -}}
         {{- else if eq .Kind "term" -}}
-          {{- .Title | lower -}}
+          {{- .Title | urlize -}}
         {{- else -}}
           {{- with .Slug -}}
             {{- . -}}
           {{- else -}}
             {{- with .File -}}
-              {{- .BaseFileName -}}
+              {{- .BaseFileName | urlize -}}
             {{- end -}}
           {{- end -}}
         {{- end -}}
