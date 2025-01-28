@@ -1,4 +1,5 @@
 <nav class="breadcrumb subtitle" aria-label="breadcrumbs">
+  {{ if not .IsHome }}
   <ol>
     {{- range .Ancestors.Reverse }}
     <li>
@@ -49,4 +50,5 @@
       </a>
     </li>
   </ol>
+  {{ end }}
 </nav>
