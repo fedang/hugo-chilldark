@@ -141,6 +141,10 @@ span.distanced {
   margin: 0 var(--dist);
 }
 
+.headinfo {
+  margin-top: 2em;
+}
+
 .note, .pubinfo, .series {
   border: solid 2px var(--fg);
   border-radius: var(--radius);
@@ -372,9 +376,6 @@ a.footnote-ref {
   .subtitle {
     margin: 0.6em 0.4em;
   }
-  .subtitle:before {
-    font-size: var(--snd-size);
-  }
   .pubdate {
     margin-right: 0;
   }
@@ -416,6 +417,9 @@ a.footnote-ref {
   blockquote {
     padding: 0.2em;
     padding-left: 0.6em;
+  }
+  .headinfo {
+    margin-top: 1.4em;
   }
 }
 
