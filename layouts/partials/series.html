@@ -6,12 +6,12 @@
       {{ range $num,$post := ($.Site.Taxonomies.series.Get $series.Title).Pages.ByDate }}
       {{ $curr := eq $post.Permalink $.Page.Permalink }}
         <li {{ if $curr }} class="active" {{end}}>
+          <a href="{{$post.Permalink}}">{{ $post.Params.title}}</a>
           {{ if $curr -}}
-            {{ with (resources.Get "icons/left-arrow.svg") -}}
+            {{ with (resources.Get "icons/arrow-left.svg") -}}
               <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert">
             {{- end -}}
           {{- end }}
-          <a href="{{$post.Permalink}}">{{ $post.Params.title}}</a>
         </li>
       {{ end }}
     </ol>
