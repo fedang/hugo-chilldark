@@ -82,7 +82,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 2em;
+  line-height: 1.8em;
 }
 
 li  {
@@ -141,7 +142,6 @@ span.distanced {
 }
 
 .headinfo {
-  padding: 0 .8em;
   margin-top: 2em;
   width: 100%;
 }
@@ -161,7 +161,6 @@ span.distanced {
 }
 
 .pubinfo, .series {
-  width: 100%;
   margin-top: 1em;
 }
 
@@ -188,14 +187,13 @@ span.distanced {
 }
 
 .title {
-  font-size: 2em;
   margin-top: 1em;
 }
 
 .subtitle {
   font-size: var(--snd-size);
   white-space: nowrap;
-  margin-left: 1.5em;
+  margin-left: 1.2em;
   display: inline-flex;
   align-items: center;
 }
@@ -384,6 +382,9 @@ a.footnote-ref {
   }
   .headinfo {
     margin-top: 0;
+  }
+  li  {
+    margin: 0.32em 0;
   }
 }
 
