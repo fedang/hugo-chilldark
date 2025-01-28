@@ -1,4 +1,2 @@
-{{ if not .IsHome }}
-  {{ partial "breadcrumbs.html" . }}
-{{ end }}
+{{ partial "breadcrumbs.html" . }}
 <h1 class="title">{{ .Title | default site.Title }}</h1>
