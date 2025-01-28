@@ -114,7 +114,7 @@ hr.distanced {
 }
 
 header {
-  margin-top: 1em;
+  margin-top: 3.2em;
   margin-bottom: 3em;
 }
 
@@ -192,11 +192,14 @@ span.distanced {
 }
 
 .subtitle {
-  font-size: 1em;
+  font-size: var(--snd-size);
   white-space: nowrap;
-  margin-left: 1.6em;
+  margin-left: 1.5em;
   display: inline-flex;
   align-items: center;
+  position: absolute;
+  top: 0;
+  margin-top: 0.8em;
 }
 
 .subtitle:before {
@@ -408,7 +411,10 @@ a.footnote-ref {
     font-size: 1.8em;
   }
   .subtitle {
-    margin: 0 0.4em;
+    margin: 0.6em 0.4em;
+  }
+  .subtitle:before {
+    font-size: var(--snd-size);
   }
   .pubdate {
     margin-right: 0;
