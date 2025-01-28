@@ -320,11 +320,6 @@ a.footnote-ref {
   font-size: 105%;
 }
 
-/* FIXME */
-.icon:last-child {
-  margin-left: 0.5em;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --fg: #fff;
