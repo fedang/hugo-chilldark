@@ -4,7 +4,13 @@
     <span class="active">Part of the series <em><strong><a href="{{ .Permalink }}">{{ .Title  }}</a></em></strong></span>
     <ol>
       {{ range $num,$post := ($.Site.Taxonomies.series.Get $series.Title).Pages.ByDate }}
-        <li {{ if eq $post.Permalink $.Page.Permalink }} class="active" {{end}}>
+      {{ $curr := eq $post.Permalink $.Page.Permalink }}
+        <li {{ if $curr }} class="active" {{end}}>
+          {{ if $curr -}}
+            {{ with (resources.Get "icons/left-arrow.svg") -}}
+              <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert">
+            {{- end -}}
+          {{- end }}
           <a href="{{$post.Permalink}}">{{ $post.Params.title}}</a>
         </li>
       {{ end }}
