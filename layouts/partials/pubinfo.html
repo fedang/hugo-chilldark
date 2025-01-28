@@ -3,9 +3,10 @@
 {{- if not .Params.no_pubinfo -}}
   <div class="pubinfo">
     <span class="pubdate">
-      {{ with (resources.Get "icons/calendar.svg") -}}
-        <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert">
-      {{- end -}}
+      {{ with (resources.Get "icons/calendar-day.svg") -}}
+        <img src="{{ .RelPermalink }}" class="icon icon-small icon-invert">
+      {{- end }}
+      &nbsp;
       {{- with .Date }}
       <time {{ .Format $ISO8601 | printf "datetime=%q" | safeHTMLAttr }}>{{ .Format $FMT }}</time>
       {{end}}
@@ -19,7 +20,7 @@
     {{- with .GetTerms "tags" }}
     <span>
       {{ with (resources.Get "icons/tags.svg") -}}
-        <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert">
+        <img src="{{ .RelPermalink }}" class="icon icon-small icon-invert">
       {{- end -}}
 
       {{- range $i, $e := . -}}
