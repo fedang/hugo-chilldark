@@ -145,6 +145,7 @@ span.distanced {
   border: solid 2px var(--fg);
   border-radius: var(--radius);
   padding: var(--pads);
+  width: 100%;
 }
 
 .note {
@@ -155,8 +156,8 @@ span.distanced {
   margin: 0.5em auto;
 }
 
-.pubinfo, .series {
-  width: 100%;
+.series {
+  margin-top: 1em;
 }
 
 .pubinfo {
