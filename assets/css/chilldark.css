@@ -208,6 +208,11 @@ span.distanced {
   display: inline-block;
 }
 
+.homepad {
+  height: 0;
+  display: inline-block;
+}
+
 .secondary {
   color: var(--snd);
   font-size: var(--snd-size);
