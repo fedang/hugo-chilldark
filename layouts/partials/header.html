@@ -1,2 +1,6 @@
-{{ partial "breadcrumbs.html" . }}
+{{ with .IsHome }}
+  <span class="homepad"></span>
+{{ else }}
+  {{ partial "breadcrumbs.html" . }}
+{{ end }}
 <h1 class="title">{{ .Title | default site.Title }}</h1>
