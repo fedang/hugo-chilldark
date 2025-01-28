@@ -83,7 +83,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 2em;
-  line-height: 1.8em;
+  line-height: 1.4em;
 }
 
 li  {
@@ -141,11 +141,6 @@ span.distanced {
   margin: 0 var(--dist);
 }
 
-.headinfo {
-  margin-top: 2em;
-  width: 100%;
-}
-
 .note, .pubinfo, .series {
   border: solid 2px var(--fg);
   border-radius: var(--radius);
@@ -161,7 +156,7 @@ span.distanced {
 }
 
 .pubinfo, .series {
-  margin-top: 1em;
+  width: 100%;
 }
 
 .pubinfo {
@@ -178,6 +173,8 @@ span.distanced {
 
 .pubtag {
   font-size: var(--snd-size);
+  white-space: nowrap;
+  word-break: break-word:
 }
 
 .dash {
@@ -368,7 +365,7 @@ a.footnote-ref {
     word-break: break-word;
   }
   .title {
-    font-size: 1.8em;
+    font-size: 1.64em;
     margin-top: 0.6em;
   }
   .subtitle {
@@ -407,6 +404,7 @@ a.footnote-ref {
   }
   h1, h2, h3, h4 {
     line-height: 2.2rem;
+    font-size: 1.4rem;
   }
   pre, code, kbd, samp {
     font: 0.85rem/1.25rem monospace;
