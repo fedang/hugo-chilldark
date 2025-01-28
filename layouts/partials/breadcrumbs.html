@@ -1,6 +1,6 @@
-<nav class="breadcrumb" aria-label="breadcrumbs">
-  {{ if not .IsHome }}
-  <ol class="subtitle">
+{{ if not .IsHome }}
+<nav class="breadcrumb subtitle" aria-label="breadcrumbs">
+  <ol>
     {{- range .Ancestors.Reverse }}
     <li>
       {{- if not .IsHome -}}<span class="distanced" aria-hidden="true">/</span>{{- end -}}<a class="secondary" href="{{ .RelPermalink }}">
@@ -50,5 +50,5 @@
       </a>
     </li>
   </ol>
-  {{ end }}
 </nav>
+{{ end }}
