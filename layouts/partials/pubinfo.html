@@ -9,6 +9,7 @@
         <span class="distanced"></span><span class="secondary nowrap flex-align" title="Last modification">
           ({{with .Lastmod }}<time {{ .Format $ISO8601 | printf "datetime=%q" | safeHTMLAttr }}>{{ .Format $FMT }}</time>{{end}}
           {{ with (resources.Get "icons/pen-to-square.svg") -}}
+          &nbsp;
             <img src="{{ .RelPermalink }}" class="icon icon-smaller">)
           {{- end -}}
         </span>
