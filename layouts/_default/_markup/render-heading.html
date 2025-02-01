@@ -1,4 +1,8 @@
 <h{{ .Level }} id="{{ .Anchor }}" {{- with .Attributes.class }} class="{{ . }}" {{- end }}>
-  <a class="secondary" href="#{{ .Anchor }}">#</a>
   {{ .Text }}
+  <a class="secondary anchor" href="#{{ .Anchor }}">
+    {{ with (resources.Get "icons/link.svg") -}}
+      <img src="{{ .RelPermalink }}" class="icon icon-smaller">
+    {{ end }}
+  </a>
 </h{{ .Level }}>
