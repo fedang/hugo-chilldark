@@ -217,7 +217,6 @@ span.distanced {
 .secondary {
   color: var(--snd);
   font-size: var(--snd-size);
-  display: inline;
 }
 
 .secondary a {
@@ -321,6 +320,14 @@ a.footnote-ref {
 
 .icon-invert {
   font-size: 105%;
+}
+
+h1 .anchor, h2 .anchor, h3 .anchor {
+  display: none;
+}
+
+h1:hover .anchor, h2:hover .anchor, h3:hover .anchor {
+  display: revert;
 }
 
 @media (prefers-color-scheme: dark) {

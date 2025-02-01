@@ -14,3 +14,9 @@ name = 'John Doe'
 	category = 'categories'
 	tag = 'tags'
 	series = 'series'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        title = true
