@@ -149,7 +149,6 @@ span.distanced {
   border: solid 2px var(--fg);
   border-radius: var(--radius);
   padding: var(--pads);
-  width: 100%;
 }
 
 .note {
@@ -162,6 +161,7 @@ span.distanced {
 
 .series {
   margin-top: 1em;
+  width: 100%;
 }
 
 .pubinfo {
@@ -170,6 +170,7 @@ span.distanced {
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: center;
+  width: 100%;
 }
 
 .pubdate {
