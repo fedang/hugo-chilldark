@@ -330,6 +330,18 @@ h1:hover .anchor, h2:hover .anchor, h3:hover .anchor {
   display: revert;
 }
 
+div.goat {
+  font-family: monospace;
+}
+
+.width-100 {
+  width: 100%;
+}
+
+.width-50 {
+  width: 50%;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --fg: #fff;
