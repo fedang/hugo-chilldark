@@ -11,6 +11,8 @@
           {{- .Section | urlize -}}
         {{- else if eq .Kind "term" -}}
           {{- .Title | urlize -}}
+        {{- else if .BundleType -}}
+          {{- .File.ContentBaseName -}}
         {{- else -}}
           {{- if .Site.Params.title_crumbs -}}
             {{- .Title | urlize -}}
@@ -37,6 +39,8 @@
           {{- .Section | urlize -}}
         {{- else if eq .Kind "term" -}}
           {{- .Title | urlize -}}
+        {{- else if .BundleType -}}
+          {{- .File.ContentBaseName -}}
         {{- else -}}
           {{- with .Slug -}}
             {{- . -}}
