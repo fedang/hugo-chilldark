@@ -40,14 +40,16 @@ main {
   padding-bottom: 32%;
 }
 
-pre, code, kbd, samp {
+pre, code, kbd, samp, textarea, input {
   background-color: var(--bg-code);
+  color: var(--fg);
   font-size: var(--snd-size);
   overflow: hidden;
   border-radius: var(--radius);
+  border: 0;
 }
 
-code {
+code, input {
   padding: 2px 4px;
 }
 
@@ -59,6 +61,17 @@ pre code {
   box-sizing: border-box;
   display: block;
   font-size: 1em;
+}
+
+textarea {
+  padding: 0.6em;
+  width: 100%;
+  height: auto;
+}
+
+input::placeholder, textarea::placeholder {
+  color: var(--snd);
+  font-size: var(--snd-size);
 }
 
 blockquote {
