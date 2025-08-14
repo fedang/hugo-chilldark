@@ -60,7 +60,7 @@ pre code {
   overflow: auto;
   box-sizing: border-box;
   display: block;
-  font-size: 1em;
+  font-size: 92%;
 }
 
 textarea {
@@ -200,10 +200,6 @@ span.distanced {
   display: inline-block;
   width: var(--small);
   text-align: center;
-}
-
-.title {
-  margin-top: 1em;
 }
 
 .subtitle {
