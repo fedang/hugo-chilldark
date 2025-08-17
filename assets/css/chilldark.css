@@ -5,7 +5,7 @@
   --snd: #696969;
   --snd-size: 0.95em;
   --snd-img: invert(42%) sepia(28%) saturate(0%) hue-rotate(162deg) brightness(90%) contrast(91%);
-  --radius: 0.2em;
+  --radius: 0.25em;
   --link: #8a2be2;
   --link2: #c9f;
   --dist: 0.32em;
@@ -14,6 +14,7 @@
   --small: 1.1em;
   --medium: 1.6em;
   --large: 3.2em;
+  --pre-pad: 0.6em;
 }
 
 html {
@@ -53,18 +54,23 @@ code, input {
   padding: 2px 4px;
 }
 
-pre code {
-  padding: 0.6em;
+pre {
   width: 100%;
-  height: auto;
   overflow: auto;
+}
+
+pre code {
+  padding: var(--pre-pad);
+  height: auto;
+  width: max-content;
+  min-width: 100%;
   box-sizing: border-box;
   display: block;
   font-size: 92%;
 }
 
 textarea {
-  padding: 0.6em;
+  padding: var(--pre-pad);
   width: 100%;
   height: auto;
 }
