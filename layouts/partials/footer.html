@@ -1,10 +1,6 @@
 <footer>
   <strong><a href="#">Top &#8593;</a></strong>
-  <p>
-  {{ with .Params.bottom_text | default .Site.Params.bottom_text }}
-    {{ $.RenderString . }}
-  {{ else }}
-  bottom text
-  {{ end }}
-  </p>
+  <div>
+    bottom text
+  </div>
 </footer>
