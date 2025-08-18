@@ -6,7 +6,7 @@
   --snd-size: 0.95em;
   --snd-img: invert(42%) sepia(28%) saturate(0%) hue-rotate(162deg) brightness(90%) contrast(91%);
   --radius: 0.25em;
-  --link: #8a2be2;
+  --link: #721fbf;
   --link2: #c9f;
   --dist: 0.32em;
   --pads: 0.6em 1.2em;
@@ -41,13 +41,29 @@ main {
   padding-bottom: 32%;
 }
 
-pre, code, kbd, samp, textarea, input {
+pre, code, kbd, samp, textarea, input, button {
   background-color: var(--bg-code);
   color: var(--fg);
   font-size: var(--snd-size);
   overflow: hidden;
   border-radius: var(--radius);
   border: 0;
+}
+
+button {
+  color: var(--bg);
+  background-color: var(--fg);
+  font-weight: 600;
+  padding: 2px 8px;
+}
+
+button:hover {
+  /*XXX*/
+  background-color: var(--link2);
+}
+
+button:disabled {
+  background-color: var(--snd);
 }
 
 code, input {
@@ -380,7 +396,7 @@ div.goat {
     --snd: #aaa;
     --snd-img: invert(80%) sepia(0%) saturate(3%) hue-rotate(190deg) brightness(87%) contrast(85%);
     --link: #c9f;
-    --link2: #f0f0f0;
+    --link2: #e9d4ff;
   }
   img {
     -webkit-filter: brightness(.90) contrast(1.1);
