@@ -4,8 +4,10 @@
     <br>
   {{end}}
 
+  {{ if not .Params.nolist }}
   {{ range .Pages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}
+  {{ end }}
   {{ end }}
 {{ end }}
