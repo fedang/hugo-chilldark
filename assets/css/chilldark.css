@@ -200,7 +200,7 @@ table {
   */
 }
 
-thead {
+th {
   background-color: var(--bg-code);
 }
 
@@ -214,7 +214,7 @@ thead + tbody > tr > td {
   border-top: 2px solid var(--fg);
 }
 
-td + td, th + th {
+th + td, td + td, th + th {
   border-left: 2px solid var(--fg);
 }
 tr + tr td, tr + tr th {
