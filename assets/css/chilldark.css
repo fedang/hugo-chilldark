@@ -186,6 +186,41 @@ footer > div > *:not(:first-child)::before {
   color: var(--snd);
 }
 
+
+table {
+  border-spacing: 0;
+  border: 2px solid var(--fg);
+  border-radius: var(--radius);
+
+  /*XXX
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  */
+}
+
+thead {
+  background-color: var(--bg-code);
+}
+
+td, th {
+  padding: 0.5rem;
+  text-align: center;
+}
+
+/*???*/
+thead + tbody > tr > td {
+  border-top: 2px solid var(--fg);
+}
+
+td + td, th + th {
+  border-left: 2px solid var(--fg);
+}
+tr + tr td, tr + tr th {
+  border-top: 2px solid var(--fg);
+}
+
 span.distanced {
   margin: 0 var(--dist);
 }

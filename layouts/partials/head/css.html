@@ -1,8 +1,13 @@
 {{ $files := slice "css/modern-normalize.css" "css/chilldark.css" }}
-{{ $files := $files | append (.Site.Params.custom_css | default (slice)) }}
-{{ $files := $files | append (.Params.custom_css | default (slice)) }}
+{{ $files = $files | union .Site.Params.custom_css }}
+{{ $files = $files | union .Params.custom_css }}
+
 {{- range $files }}
-  {{- with or ($.Page.Resources.Get .) (resources.Get .) }}
+  {{- $res := or ($.Page.Resources.Get .) (resources.Get .) }}
+  {{ if not $res }}
+    {{ errorf "CSS file %q not found in page bundle or assets" . }}
+  {{ end }}
+  {{- with $res }}
     {{- if eq hugo.Environment "development" }}
       <link rel="stylesheet" href="{{ .RelPermalink }}">
     {{- else }}

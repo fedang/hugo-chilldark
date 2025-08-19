@@ -1,16 +1,22 @@
+{{/*TODO: Handle eager/async scripts. These are all deferred!*/}}
 {{ $files := slice }}
-{{ $files := $files | append (.Site.Params.custom_js | default (slice)) }}
-{{ $files := $files | append (.Params.custom_js | default (slice)) }}
+{{ $files = $files | union .Site.Params.custom_js }}
+{{ $files = $files | union .Params.custom_js }}
+
 {{- range $files }}
-  {{- with or ($.Page.Resources.Get .) (resources.Get .) }}
+  {{- $res := or ($.Page.Resources.Get .) (resources.Get .) }}
+  {{ if not $res }}
+    {{ errorf "JS file %q not found in page bundle or assets" . }}
+  {{ end }}
+  {{- with $res }}
     {{- if eq hugo.Environment "development" }}
       {{- with . | js.Build }}
-        <script src="{{ .RelPermalink }}"></script>
+        <script src="{{ .RelPermalink }}" defer></script>
       {{- end }}
     {{- else }}
       {{- $opts := dict "minify" true }}
       {{- with . | js.Build $opts | fingerprint }}
-        <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous"></script>
+        <script src="{{ .RelPermalink }}" integrity="{{- .Data.Integrity }}" crossorigin="anonymous" defer></script>
       {{- end }}
     {{- end }}
   {{- end }}

@@ -2,8 +2,8 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 <title>{{ with .Params.meta_title }}{{.}}{{else}}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s @ %s" .Title site.Title }}{{ end }}{{end}}</title>
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
+{{ partial "head/css.html" . }}
+{{ partial "head/js.html" . }}
 <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
 <link rel="feed" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
 {{ $public := not .Params.private }}
