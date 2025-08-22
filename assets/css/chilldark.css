@@ -89,6 +89,7 @@ textarea {
   padding: var(--pre-pad);
   width: 100%;
   height: auto;
+  resize: vertical;  
 }
 
 input::placeholder, textarea::placeholder {
