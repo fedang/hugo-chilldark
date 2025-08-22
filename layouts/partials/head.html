@@ -6,8 +6,9 @@
 {{ partial "head/js.html" . }}
 <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
 <link rel="feed" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
-{{ $public := not .Params.private }}
-{{- if $public -}}
+{{- if eq .Kind "term" -}}
+  <meta name="robots" content="noindex, follow">
+{{- else if not .Params.private -}}
   <meta name="robots" content="index, follow">
 {{- else -}}
   <meta name="robots" content="noindex, nofollow">
