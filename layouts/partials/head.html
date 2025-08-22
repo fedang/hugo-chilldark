@@ -1,7 +1,7 @@
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width,minimum-scale=1">
-<title>{{ with .Params.meta_title }}{{.}}{{else}}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s @ %s" .Title site.Title }}{{ end }}{{end}}</title>
+<title>{{ with .Params.meta_title }}{{.}}{{else}}{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s %s %s" .Title site.Params.title_sep site.Title }}{{ end }}{{end}}</title>
 {{ partial "head/css.html" . }}
 {{ partial "head/js.html" . }}
 <link rel="alternate" type="application/rss+xml" href="{{.Site.BaseURL }}/index.xml" title="{{ .Site.Title }}">
