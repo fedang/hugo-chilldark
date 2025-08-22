@@ -93,6 +93,10 @@ textarea {
   overflow: auto;
 }
 
+input {
+  accent-color: var(--link);
+}
+
 input::placeholder, textarea::placeholder {
   color: var(--snd);
   font-size: var(--snd-size);
