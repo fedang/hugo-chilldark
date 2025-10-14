@@ -18,3 +18,7 @@ git submodule add https://github.com/fedang/hugo-chilldark themes/chilldark
 - [ ] Code
 - [ ] Alerts
 - [ ] css variants
+
+## Acknowledgements
+
+Icons from the FontAwesome6 free pack.
