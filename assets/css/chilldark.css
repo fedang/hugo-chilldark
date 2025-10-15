@@ -204,13 +204,13 @@ table {
   border-spacing: 0;
   border: 2px solid var(--fg);
   border-radius: var(--radius);
+  width: 100%;
+}
 
-  /*XXX
-  display: block;
-  max-width: 100%;
+.table-scroll {
+  width: 100%;
   overflow-x: auto;
-  white-space: nowrap;
-  */
+  -webkit-overflow-scrolling: touch;
 }
 
 th {
@@ -220,6 +220,7 @@ th {
 td, th {
   padding: 0.5rem;
   text-align: center;
+  white-space: nowrap;
 }
 
 /*???*/
