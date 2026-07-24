@@ -389,6 +389,12 @@ a.footnote-ref {
   display: inline-block;
 }
 
+.icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .icon-smaller {
   height: var(--smaller);
   width: var(--smaller);

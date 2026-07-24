@@ -9,7 +9,9 @@
           <a href="{{$post.Permalink}}">{{ $post.Params.title}}</a>
           {{ if $curr -}}
             {{ with (resources.Get "icons/arrow-left.svg") -}}
-              <img src="{{ .RelPermalink }}" class="icon icon-smaller icon-invert">
+              <span class="icon icon-smaller icon-invert">
+                {{ .Content | safeHTML }}
+              </span>
             {{- end -}}
           {{- end }}
         </li>

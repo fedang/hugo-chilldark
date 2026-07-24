@@ -3,5 +3,7 @@
 {{ $image := resources.Get $name }}
 {{ $size := .Get 1 | default `small` }}
 {{- with $image -}}
-<img src="{{ .RelPermalink }}" class="icon icon-{{ $size }} icon-invert" alt="{{ title $pname }} icon">
+<span class="icon icon-{{ $size }} icon-invert" role="img" aria-label="{{ title $pname }} icon">
+  {{ .Content | safeHTML }}
+</span>
 {{- end -}}
