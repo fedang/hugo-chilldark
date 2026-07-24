@@ -4,7 +4,7 @@
   <div class="pubinfo">
     <span class="pubdate flex-align">
       {{ with (resources.Get "icons/calendar-day.svg") -}}
-        <span class="icon icon-smaller icon-invert">
+        <span class="icon icon-smaller">
           {{ .Content | safeHTML }}
         </span>
       {{- end }}
@@ -22,7 +22,7 @@
     {{- with .GetTerms "tags" }}
     <span>
       {{ with (resources.Get "icons/tags.svg") -}}
-        <span class="icon icon-smaller icon-invert">
+        <span class="icon icon-smaller">
           {{ .Content | safeHTML }}
         </span>
       {{- end -}}
